@@ -17,11 +17,11 @@ class Counter extends Component {
     //  count: this.state.count +1
     // })
     // }
-    if (this.state.doubleCount ===  false && this.state.count < 20) {
+    if (!this.state.doubleCount && this.state.count < 20) {
     this.setState({
       count: this.state.count + 1,
         }); 
-    }else if (this.state.doubleCount === true && this.state.count <19){
+    }else if (this.state.doubleCount && this.state.count <19){
       this.setState({
         count: this.state.count +2
       })
@@ -30,13 +30,11 @@ class Counter extends Component {
     // this is where your code goes
   
   decrement = () => {
-  
-    
-  if(this.state.doubleCount === false && this.state.count > 0){
+    if(!this.state.doubleCount && this.state.count > 0){
       this.setState({
         count: this.state.count -1,
       })
-   }else if (this.state.doubleCount === true && this.state.count > 1){
+   }else if (this.state.doubleCount && this.state.count > 1){
   
       this.setState({
         count: this.state.count -2
